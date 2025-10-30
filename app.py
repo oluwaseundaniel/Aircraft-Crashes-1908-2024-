@@ -4,7 +4,7 @@ import altair as alt
 import numpy as np
 
 def load_data():
-    df= pd.read_csv('Aircrashes.xlsx')
+    df= pd.read_csv('aircrashes.xlsx')
    # replacing special characters in country/region column
     df["Country/Region"] = (df["Country/Region"].str.rstrip().str.replace(r'[^A-Za-z0-9_]', '', regex=True)
 )
@@ -634,3 +634,4 @@ except Exception as e:
         st.code(str(e))
 
          # st.code(traceback.format_exc())
+
